@@ -23,6 +23,7 @@ jobs:
           docker build . -t stefan
           docker tag stefan 244530008913.dkr.ecr.eu-west-1.amazonaws.com/stna003:$rev
           docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/stna003:$rev
+  push_to_docker_hub:
     name: Push docker image to docker
     runs-on: ubuntu-latest
     steps:
