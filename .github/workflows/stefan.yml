@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: stefan
-          path: stefan.tar
+          path: ./stefan.tar
           
   # push_to_ECR:
   #   name: Log into ECR and push image to ECR
