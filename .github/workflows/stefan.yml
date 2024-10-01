@@ -17,13 +17,12 @@ jobs:
         uses: docker/setup-buildx-action@v1
         
       - name: Build image
-        run: docker buildx build . -t stefan:latest --output ./stefan.tar
+        run: docker buildx build . -t stefan:latest
         
       - name: Upload image as artifact
-        uses: actions/upload-artifact@v4
+        uses: ishworkh/container-image-artifact-upload@v2.0.0
         with:
-          name: stefan
-          path: ./stefan.tar
+          image: "stefan:latest"
           
   # push_to_ECR:
   #   name: Log into ECR and push image to ECR
