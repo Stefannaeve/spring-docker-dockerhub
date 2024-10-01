@@ -23,5 +23,17 @@ jobs:
           docker build . -t stefan
           docker tag stefan 244530008913.dkr.ecr.eu-west-1.amazonaws.com/stna003:$rev
           docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/stna003:$rev
+    name: Push docker image to docker
+    rund-on: ubuntu-latest
+    steps:
+      - name: Log in
+        uses: docker/login-action@v3
+        with: 
+          username: ${{secrets.DOCKERHUB_USERNAME}}
+          password: ${{secrets.DOCKERHUB_PASSWORD}}
+        run: |
+          docker build . -t stefan
           docker tag stefan stefannaeve/stefan
           docker push stefannaeve/stefan
+        
+        
