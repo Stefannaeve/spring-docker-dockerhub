@@ -11,7 +11,7 @@
 
 Du må start med å lage en fork av dette repoet til din egen GitHub konto. 
 
-
+ 
 ## Logg i Cloud 9 miljøet ditt
 
 * URL for innlogging er https://244530008913.signin.aws.amazon.com/console
